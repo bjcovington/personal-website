@@ -1,0 +1,82 @@
+/* Apply font styles globally */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Links and Hover Effects */
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main header styles */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Text content spacing */
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  #app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    flex: 1; /* Ensures the main content area grows */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+  }
+  

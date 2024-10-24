@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <header>
+      <h1>Personal Website</h1>
+      <nav>
+        <a href="#" @click="currentPage = 'Home'">Home</a> |
+        <a href="#" @click="currentPage = 'About'">About</a> |
+        <a href="#" @click="currentPage = 'Resume'">Resume</a>
+      </nav>
+    </header>
+
+    <!-- Display components based on the current page -->
+    <main>
+      <HomePage v-if="currentPage === 'Home'" />
+      <AboutPage v-if="currentPage === 'About'" />
+      <ResumePage v-if="currentPage === 'Resume'" />
+    </main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// Import your components manually
+import HomePage from './components/HomePage.vue';
+import AboutPage from './components/AboutPage.vue';
+import ResumePage from './components/ResumePage.vue';
+import '@/assets/fancy.css';
 
 export default {
-  name: 'App',
+  data() {
+    return {
+      currentPage: 'Home', // Default to 'Home' page
+    };
+  },
   components: {
-    HelloWorld
-  }
-}
+    HomePage,
+    AboutPage,
+    ResumePage,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
